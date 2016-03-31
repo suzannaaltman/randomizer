@@ -11,36 +11,69 @@ function clearTeams(){
   $("#teamListings").empty();
 }
 
+function clearSelection() {
+  $("#two").removeClass("selected");
+  $("#three").removeClass("selected");
+  $("#four").removeClass("selected");
+  $("#five").removeClass("selected");
+  $("#six").removeClass("selected");
+  $("#seven").removeClass("selected");
+  $("#eight").removeClass("selected");
+  $("#nine").removeClass("selected");
+  $("#ten").removeClass("selected");
+  $("#eleven").removeClass("selected");
+}
+
 $('#buttonHolder').children().on('click', function() {
   switch($(this).attr("id")){
     case 'two':
+      clearSelection();
+      $("#two").addClass("selected");
       numTeams = 2;
       break;
     case 'three':
+      clearSelection();
+      $("#three").addClass("selected");
       numTeams = 3;
       break;
     case 'four':
+      clearSelection();
+      $("#four").addClass("selected");
       numTeams = 4;
       break;
     case 'five':
+      clearSelection();
+      $("#five").addClass("selected");
       numTeams = 5;
       break;
     case 'six':
+      clearSelection();
+      $("#six").addClass("selected");
       numTeams = 6;
       break;
     case 'seven':
+      clearSelection();
+      $("#seven").addClass("selected");
       numTeams = 7;
       break;
     case 'eight':
+      clearSelection();
+      $("#eight").addClass("selected");
       numTeams= 8;
       break;
     case 'nine':
+      clearSelection();
+      $("#nine").addClass("selected");
       numTeams = 9;
       break;
     case 'ten':
+      clearSelection();
+      $("#ten").addClass("selected");
       numTeams = 10;
       break;
     case 'eleven':
+      clearSelection();
+      $("#eleven").addClass("selected");
       numTeams = 11;
       break;
   }

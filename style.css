@@ -27,6 +27,10 @@ button:hover {
   background: #ff6f00;
   text-decoration: none;
 }
+.selected {
+  background: #ff6f00;
+  text-decoration: none;
+}
 
 #buttonHolder{
   text-align: center;
