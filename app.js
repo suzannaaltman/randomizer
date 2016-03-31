@@ -5,11 +5,10 @@ var nameList = ['Max', 'Lisa', 'Suzanna', 'Kyle', 'Chris T.', 'Chris R.', 'Jenni
 'Cari', 'Libby','Courtney'];
 
 var numTeams = 0;
-var shuffledNames = [];
 var nameLength = nameList.length;
 
-function clearTeams() {
-  $('#teamListings').empty();
+function clearTeams(){
+  $("#teamListings").empty();
 }
 
 $('#buttonHolder').children().on('click', function() {
@@ -48,9 +47,12 @@ $('#buttonHolder').children().on('click', function() {
 })
 
 $('#generateButton').on('click', function() {
-  console.log(nameList);
-  //TODO: fix clear function 
-  shuffledNames = shuffle(nameList);
+  if(numTeams === 0){
+    return alert("Select a number, dolt!");
+  }
+
+  clearTeams();
+  shuffle(nameList);
   // Create a div for each team
   makeDivs();
 
@@ -59,20 +61,23 @@ $('#generateButton').on('click', function() {
 
 });
 
+$('#empty').on('click', function() {
+  $("#teamListings").empty();
+});
 
 
 function addNames() {
-  while(shuffledNames.length > 0) {
+  var count = 0;
+  while(count < nameList.length - 1) {
    for(var i = 0; i < numTeams; i++) {
-    var currentName = shuffledNames.pop();
-    var appendDiv = "<p>" + currentName + "</p>";
+    var appendDiv = "<p>" + nameList[count] + "</p>";
     var currentId = "#" + (i+1).toString();
     $(currentId).append(appendDiv);
+    count++;
 
-    if(!shuffledNames.length) {
+    if(count === nameList.length) {
       break;
     }
-    console.log(currentName, currentId);
   };
  };
 }
@@ -82,9 +87,9 @@ function makeDivs() {
 
   var divHTMLpt1 = '<div class = \'group\' id = \'';
   var divHTMLpt2 = '\'></div>'; // add vars
-
+  var randomNames = randomTeamName(numTeams);
   for (var i = 0; i < numTeams; i++) {
-    var teamName = '<h2>Team ' + (i + 1) + '</h2>';
+    var teamName = '<h2>' + (i + 1) + '. ' + randomNames[i] + '</h2>';
 
    $('#teamListings').append(divHTMLpt1 + (i + 1) + divHTMLpt2);
    $('#teamListings').children().last().append(teamName)
@@ -93,6 +98,7 @@ function makeDivs() {
 
 //The Fisher-Yates shuffle
 function shuffle(array) {
+
   var tempArr = array;
   var m = tempArr.length, t, i;
 
@@ -111,22 +117,27 @@ function shuffle(array) {
   return tempArr;
 }
 
+var adjectives = ['Pistachio', 'Sparkly', 'Banana', 'Nerdy', 'Rainbow',
+'Hungry, Hungry', 'Invisible', 'Magnificent', 'Fancy', 'Lunar', 'Cantankerous',
+'Geodesic', 'Big-Nosed', 'Spaghetti', 'Ursine', 'Spanky', 'Murderous', 'Code',
+'Rambunctious', 'Urgent', 'Instant', 'Anonymous', 'Static', 'Tiny', 'Massive',
+'Cro-Magnon', 'Vegan', 'Hipster', 'Fighting', 'Quizzical', 'Tumbling', 'Tetra',
+'The Chosen', 'Souped-Up', 'Non-Canonical', 'Mellifluous', 'Hulking', 'Stinky', 'Grape-Flavored',
+'Egregious', 'Bovine', 'Real', 'Fake', 'Faux', 'East-Side'];
+var nouns = ['Sandwiches', 'Nerds', 'Monkeys', 'Cowboys', 'Ninjas', 'Pants',
+'Octothorpes', 'Unicorns', 'Hamsters',
+'Bunnies', 'Glow Worms', 'Domes', 'Rhombi',
+'Octopi', 'Punk', 'Prime Ministers', 'Crypto-Zoologists', 'Robots',
+'Pi', 'Hipster', 'Pizza', 'Queries', 'Arrays', 'Soup', 'Tumbleweeds', 'Smarty-Pants', 'Bros'];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function randomTeamName(num) {
+ shuffle(adjectives);
+ shuffle(nouns);
+ var arr = [];
+  for (var i = 0; i < num; i++) {
+    arr.push("Team " + adjectives[i] + " " + nouns[i]);
+  }
+  return arr;
+}
 
 });
