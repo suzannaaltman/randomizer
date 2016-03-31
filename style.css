@@ -1,0 +1,24 @@
+body {
+  background-color: teal;
+}
+
+.group {
+  float: left;
+  display: block;
+  background: cornflowerblue;
+  margin: 20px;
+  width: 12%;
+  padding: 4px;
+}
+
+.group p {
+  padding: 8px;
+  margin: 4px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
