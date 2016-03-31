@@ -2,21 +2,63 @@ body {
   background-color: #b8c7d1;
 }
 
+h1{
+  text-align: center;
+  font-family: courier;
+  font-size: 65px;
+  font-weight: bold;
+  color: #ff6f00;
+  margin: 50px 0;
+  text-shadow: black 4px 4px;
+}
+
+button {
+  border-radius: 8px;
+ text-shadow: 1px 1px 3px #666666;
+ font-family: Courier New;
+ color: #ffffff;
+ font-size: 18px;
+ background: #ffa200;
+ padding: 10px 20px 10px 20px;
+ margin-right: 15px;
+ text-decoration: none;
+}
+button:hover {
+  background: #ff6f00;
+  text-decoration: none;
+}
+
+#buttonHolder{
+  text-align: center;
+}
+
+#teamListings{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+#generatorHolder{
+  text-align: center;
+}
 .group {
   float: left;
   display: block;
   background: -webkit-linear-gradient( top ,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(255, 255, 0, 1) 15%,
-    rgba(0, 255, 0, 1) 30%,
-    rgba(0, 255, 255, 1) 50%,
-    rgba(0, 0, 255, 1) 65%,
-    rgba(255, 0, 255, 1) 80%,
-    rgba(255, 0, 0, 1) 100%);
+    rgba(255, 0, 0, .75) 0%,
+    rgba(255, 255, 0, .75) 15%,
+    rgba(0, 255, 0, .75) 30%,
+    rgba(0, 255, 255, .75) 50%,
+    rgba(0, 0, 255, .75) 65%,
+    rgba(255, 0, 255, .75) 80%,
+    rgba(255, 0, 0, .75) 100%);
   margin: 20px;
   width: 12%;
   padding: 4px;
   min-height: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .group p {
@@ -32,7 +74,7 @@ h2 {
 }
 
 input {
-  margin-top: 10px;
+  margin: 35px 10px;
 }
 
 p {

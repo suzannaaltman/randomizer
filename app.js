@@ -123,12 +123,16 @@ var adjectives = ['Pistachio', 'Sparkly', 'Banana', 'Nerdy', 'Rainbow',
 'Rambunctious', 'Urgent', 'Instant', 'Anonymous', 'Static', 'Tiny', 'Massive',
 'Cro-Magnon', 'Vegan', 'Hipster', 'Fighting', 'Quizzical', 'Tumbling', 'Tetra',
 'The Chosen', 'Souped-Up', 'Non-Canonical', 'Mellifluous', 'Hulking', 'Stinky', 'Grape-Flavored',
-'Egregious', 'Bovine', 'Real', 'Fake', 'Faux', 'East-Side'];
+'Egregious', 'Bovine', 'Real', 'Fake', 'Faux', 'East-Side', 'Ancient', 'Blue'
+,'Unforgettable', 'Magnum', 'Neon', 'Retro', 'Unsavory', 'Aggressive', 'Sepia-Toned'
+,'Feral'];
 var nouns = ['Sandwiches', 'Nerds', 'Monkeys', 'Cowboys', 'Ninjas', 'Pants',
 'Octothorpes', 'Unicorns', 'Hamsters',
 'Bunnies', 'Glow Worms', 'Domes', 'Rhombi',
 'Octopi', 'Punk', 'Prime Ministers', 'Crypto-Zoologists', 'Robots',
-'Pi', 'Hipster', 'Pizza', 'Queries', 'Arrays', 'Soup', 'Tumbleweeds', 'Smarty-Pants', 'Bros'];
+'Pi', 'Hipster', 'Pizza', 'Queries', 'Arrays', 'Soup', 'Tumbleweeds', 'Smarty-Pants',
+'Bros', 'Barricudas', 'Diet', 'Gamers', 'Helicopter Pilots', 'Pirates', 'Pterodactyl',
+'Chihuauas'];
 
 function randomTeamName(num) {
  shuffle(adjectives);
